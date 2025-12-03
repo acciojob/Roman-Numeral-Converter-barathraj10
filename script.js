@@ -9,6 +9,16 @@ function convertToRoman(num) {
       6:['I', 1]
     };
 
+	let s="";
+
+	for(let k in obj){
+		while(num>=obj[k][1]){
+			s+=obj[k][0];
+			num-=obj[k][1];
+		}
+	}
+	return s;
+
   //your code here
 
 }
